@@ -1,7 +1,7 @@
 import "./page.css"
 
 export default function Main() {
-    return (<div>
+    return (<div className={""}>
         
     </div>)
 }
