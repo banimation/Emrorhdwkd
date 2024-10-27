@@ -1,28 +1,36 @@
 "use client";
 import React from "react";
+import classNames from "classnames";
+import Link from "next/link";
+import { signal } from "@preact/signals-react";
 
-const itemArr = [
-    "추천",
-    "",
-    "랭킹",
-    "",
-    "SALE"
-]
+type Tab = typeof items[number]
+const items = [
+  "추천",
+  "랭킹",
+  "SALE"
+] as const
+
+export const selectedTab = signal<Tab>("추천")
+
 export default function Tabs() {
-    const [selectedTab, setTab] = React.useState("추천");
-    return (
-        <div className={"row_items tabs"}>
-            {itemArr.map((element, index) => {
-                if(element === "") return <div className={"border"} key={index}></div>
-                const className: Array<string> = ["tab"]
-                if(element === selectedTab) className.push("selectedTab")
-                return (<div key={index} className={className.join(" ")} onClick={() => {
-                    setTab(element)
-                }}>
-                    <div>{element}</div>
-                </div>)
-                    
-            })}
-        </div>
-    )
+  return (
+    <nav>
+      <ul className="row_items tabs">
+        {items.map(item =>
+          <li
+            key={item}
+            className={classNames(
+              "tab",
+              item === selectedTab.value && "selectedTab",
+            )}
+          >
+            <button onClick={() => selectedTab.value = item}>
+              {item}
+            </button>
+          </li>
+        )}
+      </ul>
+    </nav>
+  )
 }

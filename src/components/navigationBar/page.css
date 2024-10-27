@@ -28,25 +28,35 @@
     gap: 10px;
 }
 .tabs {
+    height: 100%;
     font-weight: bolder;
     justify-content: center;
-    gap: 50px;
 }
 .tab {
+    position: relative;
     color: #5f5f5f;
-    padding-right: 20px;
-    padding-left: 20px;
+    width: 10em;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.tab button {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: none;
+}
+.tab:not(:first-of-type)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 50%;
+    border: solid 1px rgb(172, 172, 172);
+}
 .tab:hover {
     color: #000;
-}
-.border {
-    border: solid 1px rgb(172, 172, 172);
-    height: 50%;
 }
 .selectedTab {
     color: #000;
