@@ -1,25 +1,23 @@
 "use client";
 
 import "./page.css"
-import Node from "./node"
-import { signal } from "@preact/signals-react";
+import { signal } from "@preact/signals-react"
+import Step0 from "./steps/step0/step0"
+import Step1 from "./steps/step1/step1"
+import Step2 from "./steps/step2/step2";
+import Step3 from "./steps/step3/step3";
 
 export const step = signal<number>(0)
 
 export default function SignUp() {
   return (
-    <div className={"sign-up-container"}>
-      {/* <div className={"line"}></div> */}
-      <Node 
-          icon={"👋"} 
-          title={"안녕하세요!"} 
-          desc={"저희 사이트에 방문해주셔서 감사드립니다🙋‍♀️"}
-        ></Node>
-        {/* <Node 
-          icon={"📖"} 
-          title={"이용약관 확인"} 
-          desc={"이용약관 제 1조..."}
-        ></Node> */}
+    <div className="sign-up-container">
+      <div className="steps-container">
+        <Step0></Step0>
+        <Step1></Step1>
+        <Step2></Step2>
+        <Step3></Step3>
+      </div>
     </div>
   )
 }

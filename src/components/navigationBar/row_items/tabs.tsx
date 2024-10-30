@@ -1,8 +1,9 @@
-"use client";
-import React from "react";
-import classNames from "classnames";
-import Link from "next/link";
-import { signal } from "@preact/signals-react";
+"use client"
+import React from "react"
+import classNames from "classnames"
+import Link from "next/link"
+import { signal } from "@preact/signals-react"
+import { useSignals } from "@preact/signals-react/runtime"
 
 type Tab = typeof items[number]
 const items = [
@@ -13,7 +14,10 @@ const items = [
 
 export const selectedTab = signal<Tab>("추천")
 
+
 export default function Tabs() {
+  useSignals
+  ()
   return (
     <nav>
       <ul className="row_items tabs">

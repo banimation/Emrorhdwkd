@@ -1,0 +1,26 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+.button-container {
+  max-width: 500px; /* <- 특정 상황에만 쓰이는거 */
+  z-index: 3; /* <- 특정 상황에만 쓰이는거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px #000;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  width: 90dvw; /* <- 특정 상황에만 쓰이는거 */
+  height: 80px; /* <- 특정 상황에만 쓰이는거 */
+  bottom: 20px; /* <- 특정 상황에만 쓰이는거 */
+}
+.button-container:hover {
+  background-color: #b4b4b4;
+}
+.button-label {
+  font-weight: bolder;
+  font-size: 100%;
+}

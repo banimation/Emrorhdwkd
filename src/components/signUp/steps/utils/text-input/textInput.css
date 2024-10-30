@@ -1,0 +1,70 @@
+
+.text-input-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+}
+.text-input-container input {
+  position: absolute;
+  font-size: 15px;
+  color: #222222;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  background: none;
+  z-index: 5;
+  top: 0;
+}
+.text-input-container input::placeholder {
+  color: #aaaaaa;
+}
+.text-input-container label {
+  position: absolute;
+  color: #aaaaaa;
+  font-size: 1.5em;
+  left: 0;
+  top: 0;
+  transition: font-size .2s, top .2s;
+}
+.text-input-container span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  background-color: #666;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transition: width 0.5s;
+}
+.text-input-container:has(input:focus) {
+  input {
+    outline: none;
+  }
+  label {
+    top: -1.5em;
+    font-size: 1em;
+    color: #666;
+  }
+  span {
+    width: 100%
+  }
+}
+.text-input-container:not(input:placeholder-shown) {
+  input {
+    outline: none;
+  }
+  label {
+    top: -1.5em;
+    font-size: 1em;
+    color: #666;
+  }
+  span {
+    width: 100%
+  }
+}

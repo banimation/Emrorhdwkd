@@ -1,0 +1,105 @@
+:root {
+  --transition-duration: .5s;
+}
+.step0-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  overflow-y: hidden;
+}
+.node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  max-width: 90%;
+  height: 100px;
+  padding: 20px;
+  background-color: #fff;
+  border: solid 3px #000;
+  border-radius: 20px;
+  opacity: 0;
+}
+.node.ready {
+  animation: appear 2s calc(100ms * var(--index)) forwards;
+}
+.step0-container .button {
+  transform: translateY(1000px);
+  animation: appear-button 2s 2s forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0.5;
+  }
+  25% {
+    width: 100px;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    width: min(30em, 90%);
+    height: 100px;
+  }
+  75% {
+    height: calc(20px * 2 + var(--desc-height));
+  }
+  100% {
+    width: min(30em, 90%);
+    height: calc(20px * 2 + var(--desc-height));
+    opacity: 1;
+  }
+}
+
+@keyframes appear-icon {
+  75% {
+    font-size: 2em;
+    opacity: 1;
+  }
+  100% {
+    font-size: 3em;
+    opacity: 0.2;
+  }
+}
+.icon {
+  position: absolute;
+  font-size: 200%;
+  animation: appear-icon 2s calc(100ms * var(--index)) forwards;
+}
+@keyframes appear-desc {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear-button {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.desc {
+  /* 90%를 쓸 수 없어서 대신 이렇게 얻음 */
+  /* 100% = 100dvw (max: 500px) */
+  /* 90% - (20px * 2 (padding)) */
+  width: calc(min(500px, 100dvw) * 0.9 - 20px * 2);
+  opacity: 0;
+  z-index: 1;
+  color: #000;
+  font-weight: bolder;
+  animation: appear-desc 2s calc(100ms * var(--index)) forwards;
+}
