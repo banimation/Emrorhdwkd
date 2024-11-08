@@ -1,18 +1,18 @@
 "use client"
 
-import "./step0.css"
+import styles from "./step0.module.css"
+import buttonStyles from "../button.module.css"
 import Node from "./node"
 import { step } from "../../page"
-import Button from "../utils/button/button"
+import Button from "@/components/utils/button/button"
 import classNames from "classnames"
 import { useSignals } from "@preact/signals-react/runtime"
-
 
 export default function Step0() {
   const numOfStep = 0
   useSignals()
   return (
-    <div className={classNames("step-container", "step0-container")} style={{'--page': step.value}}>
+    <div className={classNames(styles.container)} style={{'--page': step.value}}>
       <Node
         icon="👋"
         title="안녕하세요!"
@@ -34,10 +34,10 @@ export default function Step0() {
       <Node
         icon="🚩"
         title="출발"
-        desc={"\"시작하기\" 버튼을 눌러 안내에 따라 계정생성을 진행해주세요! 행운을 빌어요!🏁"} // 오엥 {여기다 써야하는구나}
+        desc={"\"시작하기\" 버튼을 눌러 안내에 따라 계정생성을 진행해주세요! 행운을 빌어요!🏁"}
 				index={3}
       />
-      <Button label="시작하기" onClick={() => {step.value = numOfStep+1;console.log(step.value)}} className={"button"}></Button>
+      <Button label="시작하기" onClick={() => {step.value = numOfStep+1;console.log(step.value)}} className={classNames(buttonStyles.next_button, styles.button)}></Button>
     </div>
   )
 }

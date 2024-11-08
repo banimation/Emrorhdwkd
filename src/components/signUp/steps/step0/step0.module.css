@@ -1,13 +1,14 @@
-:root {
-  --transition-duration: .5s;
-}
-.step0-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2em;
   overflow-y: hidden;
+  width: 100dvw;
+  height: 100dvh;
+  transition: transform 500ms;
+  transform: translateX(calc(-100dvw * (var(--page))));
 }
 .node {
   position: relative;
@@ -27,7 +28,7 @@
 .node.ready {
   animation: appear 2s calc(100ms * var(--index)) forwards;
 }
-.step0-container .button {
+.button {
   transform: translateY(1000px);
   animation: appear-button 2s 2s forwards;
 }

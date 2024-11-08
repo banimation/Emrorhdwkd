@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	width: 100dvw;
+	height: 100dvh;
+	color: #000;
+	overflow: hidden;
+}
+.steps {
+	display: flex;
+}
+.step-container {
+	width: 100dvw;
+	height: 100dvh;
+	transition: transform 500ms;
+	transform: translateX(calc(-100dvw * (var(--page))));
+}

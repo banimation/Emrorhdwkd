@@ -1,0 +1,36 @@
+.productItem {
+  --width: 50%;
+  flex: 1 0 var(--width);
+  /* width: var(--width); */
+  max-width: 12.5em;
+  @media screen and (max-width: 100px) {
+    
+  }
+}
+.productImg {
+  width: 100%;
+}
+
+.text {
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productName {
+  font-weight: bold;
+}
+.productLink {
+  display: contents;
+  color: inherit;
+  text-decoration: inherit;
+}
+.originalPrice.discount {
+  color: gray;
+  text-decoration: line-through;
+}
+.actualPrice {
+  font-weight: 500;
+}

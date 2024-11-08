@@ -4,8 +4,9 @@
   /* align-items: center; */
   justify-content: center;
   position: relative;
-  width: 80%;
+  width: 100%;
   max-width: 500px;
+  height: 40px;
   padding: 20px;
 }
 .text-input-container input {
@@ -27,6 +28,7 @@
   position: absolute;
   color: #aaaaaa;
   font-size: 1.5em;
+  font-weight: bolder;
   left: 0;
   top: 0;
   transition: font-size .2s, top .2s;

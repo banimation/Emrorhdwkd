@@ -1,0 +1,76 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  align-items: center;
+  justify-content: center;
+  animation: container-animation 1s 4s forwards;
+}
+.emotes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+.product {
+  font-size: 5em;
+  animation: product-animation 4s 1s forwards;
+}
+.cart {
+  z-index: 1;
+  font-size: 10em;
+  animation: cart-animation 4s 1s forwards;
+}
+@keyframes product-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25%, 50%{
+    transform: translate(0, 2.1em);
+  }
+  60% {
+    transform: translate(0, 2.1em);
+    opacity: 0;
+  }
+  90%, 100% {
+    transform: translate(0, 2.1em);
+    opacity: 0;
+  }
+}
+@keyframes cart-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(10px, 0);
+  }
+  90%, 100%{
+    transform: translate(-3em, 0);
+  }
+}
+@keyframes container-animation {
+  0% {
+    
+  }
+  100% {
+    opacity: 0;
+  }
+}

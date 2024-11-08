@@ -13,12 +13,15 @@
     "@preact/signals-react": "^2.2.0",
     "classnames": "^2.5.1",
     "express": "^4.21.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.4",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/mysql": "^2.15.26",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
