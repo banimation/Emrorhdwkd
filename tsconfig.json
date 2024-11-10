@@ -32,7 +32,8 @@
     "moduleResolution": "node"
   },
   "ts-node": {
-    "files": true
+    "files": true,
+		// "esm": true
   },
   "include": [
     "next-env.d.ts",

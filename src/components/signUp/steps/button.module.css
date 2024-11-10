@@ -1,0 +1,20 @@
+/* 여러번 명시함으로써 우선순위를 높임 */
+.pre_button.pre_button {
+  max-width: 100px;
+  z-index: 3;
+  width: 10dvw;
+  height: 80px;
+}
+.next_button.next_button {
+  max-width: 500px;
+  z-index: 3;
+  width: 90dvw;
+  height: 80px;
+}
+.buttons {
+  gap: 1em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+}

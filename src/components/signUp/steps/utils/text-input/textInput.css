@@ -55,16 +55,3 @@
     width: 100%
   }
 }
-.text-input-container:not(input:placeholder-shown) {
-  input {
-    outline: none;
-  }
-  label {
-    top: -1.5em;
-    font-size: 1em;
-    color: #666;
-  }
-  span {
-    width: 100%
-  }
-}

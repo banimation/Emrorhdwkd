@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  gap: 10%;
+  width: 100dvw;
+  height: 100dvh;
+  transition: transform 500ms;
+  transform: translateX(calc(-100dvw * (var(--page))));
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+}
